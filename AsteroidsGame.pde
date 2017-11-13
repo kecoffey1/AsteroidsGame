@@ -13,10 +13,11 @@ public void setup()
     As[i] = new Asteroid();
   }
   for (int i = 0; i < As.length; i ++) {
-    As[i].setX(250); 
-    As[i].setY(250);
-    As[i].setDirectionX(Math.random()*5);
+    As[i].setDirectionX((Math.random()*5)-2.5);
     As[i].setDirectionY(Math.random()*5);
+    As[i].setX((int)(500*(As[i].getDirectionX())/5)); 
+    As[i].setY((int)(500*(As[i].getDirectionY())/5));
+  
 }
 }
 public void draw() 
