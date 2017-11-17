@@ -1,14 +1,14 @@
 class Asteroid extends Floater {
-     int r = (int)(Math.random() * 10); 
+    protected int r = (int)(Math.random() * 10); 
     public Asteroid() {
     corners = 10; 
-    int[] xS = {50-r*5,40-r*4,0,-40+r*4,-50+r*5, 50-r*5,40-r*4,0,-40+r*4,-50+r*5};
-    int[] yS = {0,40-r*4,50-r*5,40-r*4,0,0,-40+r*4,-50+r*5,-40+r*4,0};
+    int[] xS = {r*5,r*4,0,-r*4,-r*5, r*5,r*4,0,-r*4,-r*5};
+    int[] yS = {0,r*4,r*5,r*4,0,0,-r*4,-r*5,-r*4,0};
     xCorners = xS; 
     yCorners = yS;
     myColor = 255; 
   }
-  
+    public int getR() {return r;}
     public void setX(int x) {myCenterX = x; }
     public int getX() {return (int)myCenterX;}
     public void setY(int y){myCenterY = y; } 
@@ -19,9 +19,5 @@ class Asteroid extends Floater {
     public double getDirectionY(){return myDirectionY; }   
     public void setPointDirection(int degrees){myPointDirection = degrees; }  
     public double getPointDirection(){ return myPointDirection;}
-    public void shoot() {
-      if (key == ' ') {
-      
-      }
-    }
+   
 }
