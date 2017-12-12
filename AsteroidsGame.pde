@@ -30,7 +30,7 @@ public void setup()
 }
 public void draw() 
 {
-  println(As.size());
+ 
    for (int i =0; i < As.size(); i ++) {
      if (Spacey.getX() >= As.get(i).getX() - As.get(i).getR()*5-8 && Spacey.getX() <= As.get(i).getX() + As.get(i).getR()*5-8 && Spacey.getY() >= As.get(i).getY() - As.get(i).getR()*5-8 && Spacey.getY() <= As.get(i).getY() + As.get(i).getR()*5-8) {
        As.remove(i);
@@ -100,7 +100,7 @@ public void keyPressed()
   if(key == 'q')
   {
     B.add(new Bullet(Spacey));
-    System.out.println(B.size());
+   
     
  }
  if(key == 'h' ) 
